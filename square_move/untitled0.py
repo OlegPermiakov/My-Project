@@ -82,8 +82,11 @@ def to(event):
         id4_1 = canvas.create_polygon(748, 750, pos1[2], pos1[3]+4, pos1[0], pos1[3]+4, 2, 750, fill = '#ffffff')
         id5 = canvas.create_polygon(0, 750, pos[0]-2, pos[3], pos[0]-2, pos[1], 0, 0, fill = '#000000')
         id5_1 = canvas.create_polygon(0, 748, pos1[0]-2, pos1[3], pos1[0]-2, pos1[1], 0, 2, fill = '#ffffff')
+        
         obj = canvas.create_rectangle(pos2[0]-1, pos2[1]-1, pos2[2]+1, pos2[3]+1, fill = '#ff0000')
-    
+       
+        
+        
 def out(event):
     global id
     global id_1
@@ -110,7 +113,11 @@ def out(event):
     id4_1 = canvas.create_polygon(748, 750, pos1[2], pos1[3]+2, pos1[0], pos1[3]+2, 2, 750, fill = '#ffffff')
     id5 = canvas.create_polygon(0, 750, pos[0]+2, pos[3], pos[0]+2, pos[1], 0, 0, fill = '#000000')
     id5_1 = canvas.create_polygon(0, 748, pos1[0]-2, pos1[3], pos1[0]-2, pos1[1], 0, 2, fill = '#ffffff')
-    obj = canvas.create_rectangle(pos2[0]+1, pos2[1]+1, pos2[2]-1, pos2[3]-1, fill = '#ff0000')
+    if pos2[2]-pos2[0] == 2:
+        obj = canvas.create_rectangle(pos2[0], pos2[1], pos2[2], pos2[3], fill = '#ff0000')
+    else:
+        obj = canvas.create_rectangle(pos2[0]+1, pos2[1]+1, pos2[2]-1, pos2[3]-1, fill = '#ff0000')
+
 
 def left(event):
     global id
